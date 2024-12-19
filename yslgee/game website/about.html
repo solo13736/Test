@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME ARENA - About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #f4f4f4;
+            background: url('Images/dark.jpeg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            background: #222;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #444;
+            border-radius: 5px;
+        }
+
+        .about-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .about-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .about-container p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .team-member {
+            background: rgba(0, 0, 0, 0.7);
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #444;
+            border-radius: 10px;
+            width: calc(50% - 40px);
+            box-sizing: border-box;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .team-member {
+                width: calc(100% - 40px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+        <nav>
+            <ul>
+                <li><a href="home_page.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="brand.html">Brands</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="about-container">
+        <h2>Our Mission</h2>
+        <p>At GAME ARENA, our mission is to provide a comprehensive and engaging platform for gamers to connect, compete, purchase, and enjoy a wide variety of games. We strive to offer the best gaming experience by bringing together the latest and greatest titles from top brands and developers.</p>
+        
+        <h2>Our Vision</h2>
+        <p>We envision a global community of gamers who come together to share their passion for gaming. By offering an extensive selection of games and fostering a vibrant community, we aim to become the go-to destination for gamers worldwide.</p>
+        
+       
+        
+    </div>
+    <footer class="footer">
+        <p>&copy; 2023 GAME ARENA. All rights reserved.</p>
+    </footer>
+</body>
+</html>

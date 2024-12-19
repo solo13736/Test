@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME ARENA - Shop</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f4f4f4;
+    background: url('Images/gaming.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    background: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+    transition: color 0.3s;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.2em;
+    bottom: 0;
+    left: 0;
+    background-color: #444;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.filter-section {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.filter-section label {
+    margin-right: 10px;
+}
+
+.filter-section select,
+.filter-section input {
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: #333;
+    color: #fff;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product {
+    background: rgba(0, 0, 0, 0.7);
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    width: calc(33% - 40px);
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product h2 {
+    margin: 10px 0 5px;
+}
+
+.product p {
+    margin: 5px 0;
+}
+
+.product .price {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product .buy-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product .buy-button:hover {
+    background-color: #0056b3;
+}
+
+.footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 40px);
+    }
+
+    .filter-section {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin: 5px;
+    }
+
+    nav ul li a {
+        padding: 5px;
+    }
+
+    .product {
+        width: calc(100% - 40px);
+    }
+
+    .filter-section {
+        padding: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GAME ARENA</h1>
+        <nav>
+            <ul>
+                <li><a href="home_page.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="brand.html">Brands</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="filter-section">
+        <label for="genre">Genre:</label>
+        <select id="genre" name="genre">
+            <option value="all">All</option>
+            <option value="action">Action</option>
+            <option value="adventure">Adventure</option>
+        </select>
+
+        
+    </div>
+    <div class="product-grid">
+        <div class="product" data-genre="action">
+            <img src="Images/auto 6.jpeg" alt="Game 4">
+            <h2>GTA VI</h2>
+            <p>Pre Order</p>
+            <p class="price">$200.99</p>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="product" data-genre="action">
+            <img src="Images/blackops.jpeg" alt="Game 5">
+            <h2>Call of Duty </h2>
+            <p>$29.99</p>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="product" data-genre="adventure">
+            <img src="Images/spider.jpeg" alt="Game 6">
+            <h2>Spiderman 2</h2>
+            <p>$39.99</p>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <!-- Repeat for other products -->
+    </div>
+    
+    <script>
+        document.getElementById('genre').addEventListener('change', filterProducts);
+        document.getElementById('price').addEventListener('input', filterProducts);
+    
+        function filterProducts() {
+            const genre = document.getElementById('genre').value;
+            const price = document.getElementById('price').value;
+            const products = document.querySelectorAll('.product');
+    
+            products.forEach(product => {
+                const productGenre = product.getAttribute('data-genre');
+                const productPrice = parseFloat(product.querySelector('.price').innerText.replace('$', ''));
+    
+                if ((genre === 'all' || productGenre === genre) && productPrice <= price) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    
+    <footer class="footer">
+        <p>&copy; 2023 GAME ARENA. All rights reserved.</p>
+    </footer>
+</body>
+</html>

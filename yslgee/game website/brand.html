@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME ARENA - Brands</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #f4f4f4;
+            background: url('Images/OIP.jpeg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            background: #222;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #444;
+            border-radius: 5px;
+        }
+
+        .brands-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .brand {
+            background: rgba(0, 0, 0, 0.7);
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #444;
+            border-radius: 10px;
+            width: calc(33% - 40px);
+            box-sizing: border-box;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .brand:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .brand img {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .brand h2 {
+            margin: 10px 0;
+            font-size: 1.5em;
+        }
+
+        .brand a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+
+        .brand a:hover {
+            color: #0056b3;
+        }
+
+        .footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .brand {
+                width: calc(50% - 40px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brand {
+                width: calc(100% - 40px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Game Brands</h1>
+        <nav>
+            <ul>
+                <li><a href="home_page.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="brand.html">Brands</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="brands-container">
+        <div class="brand">
+            <img src="Images/nitendo.webp" alt="Nintendo Logo">
+            <h2>Nintendo</h2>
+            
+        </div>
+        <div class="brand">
+            <img src="Images/play station.jpeg" alt="PlayStation Logo">
+            <h2>PlayStation</h2>
+          
+        </div>
+        <div class="brand">
+            <img src="Images/Xbox.jpeg" alt="Xbox Logo">
+            <h2>Xbox</h2>
+           
+        </div>
+        <div class="brand">
+            <img src="Images/EA profile.jpeg" alt="EA Logo">
+            <h2>Electronic Arts (EA)</h2>
+            
+        </div>
+        <div class="brand">
+            <img src="Images/Sony.jpeg" alt="Sony Logo">
+            <h2>Sony</h2>
+           
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2023 GAME ARENA. All rights reserved.</p>
+    </footer>
+</body>
+</html>
